@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.jpeg">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Brimma Attendance System</title>
+</head>
+<body>
+  <header>BRIMMA &nbsp;ATTENDANCE &nbsp;SYSTEM</header>
+  <div class="container">
+    <div class="switch-wrapper">
+      <div class="switch" onclick="AdminLogin()">Admin Login</div>
+      <div class="switch" onclick="EmployeeLogin()">Employee Login</div>
+      <div class="slider" id="slider"></div>
+    </div>
+    <div class="form-wrapper" id="formWrapper">
+      <div class="form" id="adminLogin" style="padding-top: 10px;">
+        <form id="adminForm">
+        <h2>Admin Login</h2>
+        <label for="adminUsername">Username</label>
+        <input type="text" id="adminUsername" placeholder="Admin Username">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="Admin Password">
+        <button type="button" onclick="validateAdmin()">Login</button>
+        </form>
+      </div>
+
+      <div class="form" id="employeeLogin" style="padding-top:10px;">
+        <form id="employeeForm">
+        <h2>Employee Login</h2>
+        <label for="employeeUsername">Username</label>
+        <input type="text" id="employeeUsername" placeholder="Employee Username">
+        <label for="employeePassword">Password</label>
+        <input type="password" id="employeePassword" placeholder="Employee Password">
+        <button type="button" onclick="validateEmployee()">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <img class = "footerlogo" src="Brimmalogo1.jpeg">
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Use</a>
+    <p>© 2024 Brimma Tech Inc. All Rights Reserved</p>
+  </footer>
+ </body>
+</html>

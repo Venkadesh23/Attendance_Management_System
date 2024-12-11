@@ -1,0 +1,128 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      background: #f3f4f6;
+    }
+
+    header {
+      text-align: center;
+      background: #ECBD29;
+      color: black;
+      padding: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 400px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .switch-wrapper {
+      display: flex;
+      position: relative;
+      height: 60px;
+      background: #eadd49;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .switch-wrapper .switch {
+      flex: 1;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      line-height: 60px;
+      cursor: pointer;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px 10px 0 0;
+      transition: all 0.3s ease;
+    }
+
+    .form-wrapper {
+      display: flex;
+      position: relative;
+      width: 200%;
+      transition: transform 0.3s ease;
+    }
+
+    .form {
+      width: 50%;
+      padding: 30px;
+    }
+
+    .form h2 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    .form label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 10px;
+      background:#ECBD29;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form button:hover {
+      background: rgba(251,211,77,255);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #000000;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .footerlogo
+    { 
+        filter: invert(1);
+        position: absolute;
+        bottom:2.5%;
+        left :5%;
+        height: 60px;
+        width: 130px;
+    }

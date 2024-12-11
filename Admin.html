@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Brimma Attendance System</title>
+  <link rel="icon" href="logo.jpeg">
+  <link rel="stylesheet" href="Admin.css">
+  <script src="Admin.js" defer></script>
+</head>
+<body>
+
+<header>
+  Admin Dashboard
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('markAttendance')">Mark Attendance</a>
+  <a href="#" onclick="showSection('manageEmployees')">Manage Employees</a>
+  <a href="#" onclick="showSection('viewAttendance')">View Attendance</a>
+  <a href="#" onclick="showSection('approveLeave')">Approve Leave</a>
+  <a href="index.html">Logout</a>
+</nav>
+
+<div class="content">
+  <!-- Mark Attendance Section -->
+  <div id="markAttendance" style="display: none;">
+    <h2>Mark Attendance</h2>
+    <div class="employee-list">
+      <label for="employeeSelect">Select Employee:</label>
+      <select id="employeeSelect">
+        <option value="" disabled selected>Choose an employee</option>
+        <option value="Dharmar">Dharmar</option>
+        <option value="Manibalaji">Manibalaji</option>
+        <option value="Karthick">Karthick</option>
+        <option value="Venkadesh">Venkadesh</option>
+        <option value="Vigneshwaran">Vigneshwaran</option>
+      </select>
+    </div>
+    <div class="attendance-actions">
+      <button class="btn-present" onclick="markAttendance('Present')">Mark Present</button>
+      <button class="btn-absent" onclick="markAttendance('Absent')">Mark Absent</button>
+    </div>
+    <div class="attendance-log">
+      <h3>Attendance Log</h3>
+      <table>
+        <thead>
+          <tr> <th>Employee Name</th> <th>Status</th> <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceTableBody">
+          <!-- Attendance records will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Manage Employees Section -->
+  <div id="manageEmployees" style="display: none;">
+    <h2>Manage Employees</h2>
+    <button class="btn" onclick="addEmployee()">Add Employee</button>
+    <table>
+      <thead>
+        <tr><th>Employee ID</th> <th>Name</th> <th>Role</th>  <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable">
+        <tr> <td>101</td> <td>Dharmar</td> <td>Developer</td>
+          <td>
+            <button class="btn" onclick="editEmployee(101)">Edit</button>
+            <button class="btn" onclick="deleteEmployee(this)">Delete</button>
+          </td>
+        </tr>
+        <tr> <td>102</td> <td>Karthick</td> <td>Developer</td>
+          <td>
+            <button class="btn" onclick="editEmployee(101)">Edit</button>
+            <button class="btn" onclick="deleteEmployee(this)">Delete</button>
+          </td>
+        </tr>
+        <tr> <td>103</td> <td>Manibalaji</td> <td>Developer</td>
+          <td>
+            <button class="btn" onclick="editEmployee(101)">Edit</button>
+            <button class="btn" onclick="deleteEmployee(this)">Delete</button>
+          </td>
+        </tr>
+        <tr>  <td>104</td> <td>Vigneshwaran</td> <td>Developer</td>
+          <td>
+            <button class="btn" onclick="editEmployee(101)">Edit</button>
+            <button class="btn" onclick="deleteEmployee(this)">Delete</button>
+          </td>
+        </tr>
+        <tr> <td>105</td> <td>Venkadesh</td> <td>Developer</td>
+          <td>
+            <button class="btn" onclick="editEmployee(101)">Edit</button>
+            <button class="btn" onclick="deleteEmployee(this)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  
+  <div id="viewAttendance" style="display: none;">
+    <h2>View Employee Attendance</h2>
+    <input type="text" id="searchBar" placeholder="Enter Employee ID or Name" oninput="searchAttendance()">
+    <table>
+      <thead>
+        <tr> <th>Employee ID</th> <th>Name</th>  <th>Month</th> <th>Attendance (%)</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceTable">
+        <tr> <td>101</td> <td>Dharmar</td> <td>November</td> <td>98%</td>
+        </tr>
+        <tr> <td>102</td> <td>Karthick</td> <td>November</td> <td>98%</td>
+        </tr>
+        <tr> <td>103</td> <td>Manibalaji</td> <td>November</td> <td>95%</td>
+        </tr>
+        <tr><td>104</td> <td>Vigneshwaran</td> <td>November</td> <td>98%</td>
+        </tr>
+        <tr> <td>105</td> <td>Venkadesh</td> <td>November</td> <td>98%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Approve Leave Section -->
+  <div id="approveLeave" style="display: none;">
+    <h2>Approve Leave Requests</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Employee ID</th> <th>Name</th>  <th>Leave Dates</th> <th>Reason</th> <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="leaveTable">
+        <tr>
+          <td>103</td>
+          <td>Manibalaji</td>
+          <td>2024-12-02 to 2024-12-03</td>
+          <td>Family Function</td>
+          <td>
+            <button class="btn" onclick="approveLeave(101)">Approve</button>
+            <button class="btn" onclick="rejectLeave(101)">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  
+</body>
+</html>

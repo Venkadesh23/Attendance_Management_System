@@ -1,0 +1,174 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+    }
+
+    header {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    nav {
+      display: flex;
+      background: #0056b3;
+      padding: 10px;
+    }
+
+    nav a {
+      flex: 1;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-right: 1px solid white;
+      font-weight: bold;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a:hover {
+      background: #007bff;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content h2 {
+      color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #007bff;
+      color: white;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .btn + .btn {
+    margin-left: 10px; /* Adds space between consecutive buttons */
+  }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    header {
+      text-align: center;
+      background: #ECBD29;
+      color: black;
+      padding: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .employee-list {
+      margin-bottom: 20px;
+    }
+
+    .employee-list select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .attendance-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .attendance-actions button {
+      width: 48%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-present {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn-present:hover {
+      background: #218838;
+    }
+
+    .btn-absent {
+      background: #dc3545;
+      color: white;
+    }
+
+    .btn-absent:hover {
+      background: #c82333;
+    }
+
+    .attendance-log {
+      margin-top: 20px;
+    }
+
+    .attendance-log table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .attendance-log table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #378ce1;
+    }
+  

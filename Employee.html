@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard - Brimma Attendance System</title>
+  <link rel="icon" href="logo.jpeg">
+  <link rel="stylesheet" href="Employee.css">
+  <script src="Employee.js" defer></script>
+</head>
+<body>
+
+<header>
+  Employee Dashboard
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('viewAttendance')">View Attendance</a>
+  <a href="#" onclick="showSection('applyLeave')">Apply for Leave</a>
+  <a href="index.html">Logout</a>
+</nav>
+
+<div class="content">
+  <!-- View Attendance Section -->
+  <div id="viewAttendance">
+    <h2>My Attendance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Days Present</th>
+          <th>Total Days</th>
+          <th>Attendance (%)</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceTable">
+        <!-- Example row -->
+        <tr>
+          <td>November</td>
+          <td>20</td>
+          <td>22</td>
+          <td>90%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Apply for Leave Section -->
+  <div id="applyLeave" style="display: none;">
+    <h2>Apply for Leave</h2>
+    <form id="leaveForm">
+      <label for="leaveStart">Start Date:</label><br>
+      <input type="date" id="leaveStart" name="leaveStart" required><br><br>
+
+      <label for="leaveEnd">End Date:</label><br>
+      <input type="date" id="leaveEnd" name="leaveEnd" required><br><br>
+
+      <label for="leaveReason">Reason:</label><br>
+      <textarea id="leaveReason" name="leaveReason" rows="4" cols="50" placeholder="Enter reason for leave" required></textarea><br><br>
+
+      <button type="button" class="btn" onclick="submitLeaveRequest()">Submit Request</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
